@@ -7,6 +7,7 @@
 }
 html {
     display: block;
+    box-sizing: border-box!important;
 }
 a {
     text-decoration: none;
@@ -16,26 +17,48 @@ p {
 }
 h2 {
     text-align: center;
-    text-transform: uppercase;
 }
-
+.texto-superior-h2 {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+/* Header */
 header {
     background-color: #353a40;
-    padding: 25px 100px 10px 50px;
 }
-li a {
-    color: #ffffff!important;
+.logo {
+    padding: 0 75px!important;
 }
-#navbarNav {
-    margin-right: 25px;
+.logo h2 {
+    color:#FFFFFF;
 }
-
+.brand-flex {
+    display:flex;
+}
+.brand-flex h2 {
+    align-self: center;
+}
+.menu-principal li a {
+    color: #9a9ea1;
+}
+.nav-link.active, .menu-principal li a:hover, .menu-principal li a:focus {
+    color: #FFFFFF!important;
+}
+.menu-principal li:last-of-type > a{
+    color: #29a744;
+}
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+.custom-toggler.navbar-toggler {
+    border-color: rgb(255,255,255);
+  } 
 /* Main */
 .descripcion {
     text-align: right;
 }
 .seccion1 {
-    height: 50vh;
+    padding: 50px 0;
     background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/ba1.jpg');
     background-size: cover;
     background-position: center;
@@ -48,6 +71,27 @@ li a {
     flex-direction: column;
     align-items: end;
 }
+.botones {
+    display: flex!important;
+    flex-direction: row!important;
+    margin:0!important;
+}
+.botones a:first-of-type {
+    margin-right: 10px;
+}
+.btn-bd-primary {
+    --bs-btn-color: var(--bs-white)!important;
+    --bs-btn-bg: #29a744!important;
+    --bs-btn-border-color: #29a744!important;
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: transparent!important;
+    --bs-btn-hover-border-color: #FFFFFF!important;
+  }
+/* Sección 2 */
+.seccion2 {
+    margin: 0 20vw;
+    padding: 25px 0!important;
+}
 .caja {
     margin: 15px;
     border: 1px solid #e1e1e1;
@@ -58,20 +102,53 @@ li a {
     max-height: 280px;
     object-fit: cover;
 }
-.seccion3 {
-    height: 40vh;
+.caja-interna {
+    padding: 25px;
 }
+.oradores {
+    margin:0 200px!important;
+}
+.recuadro {
+    display: inline-block;
+    padding: 1px 5px 2px 5px;
+    margin: 5px 5px 5px 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.js {
+    color: #000000;
+    background-color: #fec107;
+}
+.react {
+    color: #ffffff;
+    background-color: #17a2b9;
+}
+.negocios {
+    color: #ffffff;
+    background-color: #6c757c;
+}
+.startup {
+    color: #ffffff;
+    background-color: #dc3546;
+}
+
+ /* Sección 3 */ 
 .seccion3col1 {
     background-image: url('../img/ba3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 .seccion3col2 {
+    display: flex;
+    flex-direction: column;
     padding: 1%;
     background-color: #353a40;
     color: #ffffff;
+    padding: 25px 25px!important;
 }
 .seccion4 {
+    padding: 25px 0;
     display: flex;
     justify-content:center;
 }
@@ -80,9 +157,65 @@ form {
     flex-direction: column;
     width: 35%;
 }
-
+.formulario {
+    flex-direction: column!important;
+}
 footer {
-    height: 10vh;
     background-color: #1e516e;
     padding: 15px auto;
+}
+
+@media screen and (max-width:425px) {
+
+    .brand-flex {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .logo {
+        padding: 0 10px!important;
+    }    
+    .logo img {
+        max-width:100%;
+    }
+    .logo h2 {
+        font-size: 1rem;
+        color:#FFFFFF;
+    }
+    .seccion1 div:last-of-type {
+        margin-right: 10px;
+    }
+    .seccion2 {
+        padding: 0 0;
+    }
+    .oradores {
+        margin:0!important;
+    }
+}
+@media screen and (min-width:426px) and (max-width:780px) {
+
+    .brand-flex {
+        flex-direction: column;
+    }
+    .logo {
+        padding: 0 15px!important;
+        margin: 0!important;
+    }    
+    .logo img {
+        max-width:65%;
+    }
+    .logo h2 {
+        display: inline;
+        padding:0 0 20px 0;
+        font-size:1.5rem;
+        color:#FFFFFF;
+    }
+    .seccion1 div:last-of-type {
+        margin-right: 5px;
+    }
+    .seccion2 {
+        padding: 25px 0;
+    }
+    .oradores {
+        margin:0!important;
+    }
 }

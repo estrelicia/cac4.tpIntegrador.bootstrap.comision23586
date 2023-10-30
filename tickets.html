@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@300;400;500&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <title>Compra de Tickets</title>
+</head>
+
+<body>
+    <header class="navbar navbar-expand-lg bg-black bg-opacity-75">
+        <div class="logo container-fluid">
+            <a class="navbar-brand brand-flex" href="">
+                <img src="./assets/img/codoacodo.png" alt="logo codo a codo" height="75px" class="d-inline-block">
+                <h2>Conferencia Bs. As.</h2>
+            </a>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav menu-principal">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html#seccion1">La conferencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#seccion2">Los oradores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#seccion3">El lugar y la fecha</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#seccion4">Conviértete en orador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./tickets.html">Comprar tickets</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <nav></nav>
+    </header>
+    <main class="container con-tickets">
+        <div class="row grupo-recuadros">
+            <div class="col recuadros">
+                <h3 class="titular-recuadros">Estudiante</h3>
+                <p class="texto">Tiene un descuento</p>
+                <p class="descuento-recuadros">80%</p>
+                <p class="aclaracion-recuadros">* presentar documentación</p>
+            </div>
+            <div class="col recuadros">
+                <h3 class="titular-recuadros">Trainee</h3>
+                <p class="texto">Tiene un descuento</p>
+                <p class="descuento-recuadros">50%</p>
+                <p class="aclaracion-recuadros">* presentar documentación</p>
+            </div>
+            <div class="col recuadros">
+                <h3 class="titular-recuadros">Junior</h3>
+                <p class="texto">Tiene un descuento</p>
+                <p class="descuento-recuadros">15%</p>
+                <p class="aclaracion-recuadros">* presentar documentación</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col seccion-formulario">
+            <h1>Venta</h1>
+            <p class="valor-ticket">Valor de ticket $ 200</p>
+            <form>
+                <div class="row">
+                    <div class="col-6">
+                    <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Nombre"></div>
+                    <div class="col-6">
+                    <input class="form-control" type="text" id="apellido" name="apellido" placeholder="Apellido"></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                    <input class="form-control" type="email" id="email" name="email" placeholder="Correo Electrónico"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                    <label class="form-label sin-margen" for="cantidad">Cantidad</label>
+                    <input class="form-control" type="number" id="cantidad" name="cantidad"></div>
+                    <div class="col-6">
+                    <label class="form-label" for="categoria">Categoría</label>
+                    <select class="form-select" id="categoria" name="categoria">
+                        <option value="estudiante">Estudiante</option>
+                        <option value="trainee">Trainee</option>
+                        <option value="junior">Junior</option>
+                    </select></div>
+                </div>
+                <p class="total">Total a pagar $</p>
+                <div class="botones">
+                    <button>Borrar</button>
+                    <button>Resumen</button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </main>
+    <aside>
+    </aside>
+    <footer class="container-fluid seccion5">
+        <div class="row">
+            <ul class="col nav justify-content-center">
+                <li class="nav-item p-1">Preguntas frecuentes</li>
+                <li class="nav-item p-1">Contáctanos</li>
+                <li class="nav-item p-1">Prensa</li>
+                <li class="nav-item p-1">Conferencias</li>
+                <li class="nav-item p-1">Terminos y condiciones</li>
+                <li class="nav-item p-1">Privacidad</li>
+                <li class="nav-item p-1">Estudiantes</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -74,21 +74,21 @@
             <div class="col seccion-formulario">
             <h1>Venta</h1>
             <p class="valor-ticket">Valor de ticket $ 200</p>
-            <form>
-                <div class="row">
+            <form id="formulario1" action="">
+                <div class="row lineas">
                     <div class="col-6">
-                    <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Nombre"></div>
+                    <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Nombre" maxlength=30 autocomplete="on" autofocus><span id="alerta-nombre"></span></div>
                     <div class="col-6">
-                    <input class="form-control" type="text" id="apellido" name="apellido" placeholder="Apellido"></div>
+                    <input class="form-control" type="text" id="apellido" name="apellido" placeholder="Apellido" maxlength=30 autocomplete="on"><span id="alerta-apellido"></span></div>
                 </div>
-                <div class="row">
+                <div class="row lineas">
                     <div class="col-12">
-                    <input class="form-control" type="email" id="email" name="email" placeholder="Correo Electrónico"></div>
+                    <input class="form-control" type="email" id="email" name="email" placeholder="Correo Electrónico" maxlength=50 autocomplete="on"><span id="alerta-email"></span></div>
                 </div>
-                <div class="row">
+                <div class="row lineas">
                     <div class="col-6">
                     <label class="form-label sin-margen" for="cantidad">Cantidad</label>
-                    <input class="form-control" type="number" id="cantidad" name="cantidad"></div>
+                    <input class="form-control" type="number" id="cantidad" name="cantidad"><span id="alerta-cantidad"></span></div>
                     <div class="col-6">
                     <label class="form-label" for="categoria">Categoría</label>
                     <select class="form-select" id="categoria" name="categoria">
@@ -97,11 +97,12 @@
                         <option value="junior">Junior</option>
                     </select></div>
                 </div>
-                <p class="total">Total a pagar $</p>
+                <p class="total">Total a pagar $ <span id="resultado">0</span></p>
                 <div class="botones">
-                    <button>Borrar</button>
-                    <button>Resumen</button>
+                    <button type="button" onclick="borrar()">Borrar</button>
+                    <button type="button" onclick="resultado()">Resumen</button>
                 </div>
+                <p id="demo"></p>
             </form>
         </div>
         </div>
@@ -124,6 +125,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script src="./assets/js/validacion.js"></script>
 </body>
-
 </html>

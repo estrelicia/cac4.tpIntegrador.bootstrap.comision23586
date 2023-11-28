@@ -1,27 +1,3 @@
-function validar() {
-  let cantidad = document.getElementById('cantidad').value;
-  let nombre = document.getElementById('nombre').value;
-  let apellido = document.getElementById('apellido').value;
-  let email = document.getElementById('email').value;
-
-  console.log(nombre);
-  if (nombre == '') {
-    document.getElementById('alerta-nombre').innerHTML = 'El nombre no puede estar vacío';
-  }
-  if (apellido == '') {
-    document.getElementById('alerta-apellido').innerHTML = 'El apellido no puede estar vacío';
-  }
-  if (email == '') {
-    document.getElementById('alerta-email').innerHTML =
-      'El correo electrónico no puede estar vacío';
-  }
-
-  if (cantidad < 1) {
-    document.getElementById('alerta-cantidad').innerHTML = 'La cantidad debe ser mayor a 0';
-    return false;
-  }
-}
-
 function resultado() {
   limpiar();
   validar();
@@ -49,6 +25,32 @@ function calculo() {
   document.getElementById('resultado').innerHTML = resultado;
 }
 
+function validar() {
+    let cantidad = document.getElementById('cantidad').value;
+    let nombre = document.getElementById('nombre').value;
+    let apellido = document.getElementById('apellido').value;
+    let email = document.getElementById('email').value;
+  
+    console.log(nombre);
+    if (nombre == '') {
+      document.getElementById('alerta-nombre').innerHTML = 'El nombre no puede estar vacío';
+    } 
+    if (apellido == '') {
+      document.getElementById('alerta-apellido').innerHTML = 'El apellido no puede estar vacío';
+    } 
+    if (email == '') {
+      document.getElementById('alerta-email').innerHTML =
+        'El correo electrónico no puede estar vacío';
+    } 
+    if (cantidad < 1) {
+      document.getElementById('alerta-cantidad').innerHTML = 'La cantidad debe ser mayor a 0';
+    } 
+   /* if (nombre != '' && email != '' && apellido != '' && cantidad >= 1) {
+        document.getElementById('alerta-cantidad').innerHTML = 'La cantidad debe ser mayor a 0';
+      } */
+
+  }
+
 function limpiar() {
   const x = document.getElementsByTagName('input');
   for (let i = 0; i < x.length; i++) {
@@ -68,7 +70,6 @@ function borrar() {
   const x = document.getElementsByTagName('input');
   for (let i = 0; i < x.length; i++) {
     document.getElementsByTagName('input')[i].value="";
-
   }
   document.getElementById('resultado').innerHTML = 0;
   document.getElementById('alerta-nombre').innerHTML = '';

@@ -259,6 +259,13 @@ button {
     font-size: 13px;
     font-weight: 500;
 }
+.videos-publicitarios {
+    display: flex;
+    justify-content: center;
+}
+iframe {
+    margin:5px 15px 25px 15px;
+}
 @media screen and (max-width:425px) {
 
     .brand-flex {
